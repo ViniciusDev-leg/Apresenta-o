@@ -152,7 +152,7 @@ header{
 [alt="robo"]{
     position: absolute;
     height: 97vh;
-    top: calc(100% - 97vh + 14px);
+    top: calc(100% - 97vh + calc(0.6vh + 0.6vw));
     right: calc((100% - 40vw) / 2);
     z-index: 1;
 }
@@ -243,11 +243,11 @@ header{
 #descricao{
     display: flex;
     background-color: var(--cor-cinza-claro);
-    justify-content: space-between;
     align-items: center;
     height: 70vh;
     width: 100%;
     padding: 0 5vw;
+    justify-content: space-around;
 }
 
 
@@ -255,7 +255,7 @@ header{
     font-family: var(--fonte-circular-std);
     font-size: calc(1vw + 1vh);
     color: var(--cor-cinza);
-    width: 40%;
+    width: 60%;
     text-align: justify;
 }
 
@@ -263,4 +263,203 @@ header{
     display: flex;
     flex-direction: column;
     gap: 6vh;
+}
+
+#principal{
+    background-color: var(--cor-cinza-claro);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 10vh 0;
+}
+
+#principal hr{
+    width: 90%;
+    margin: 0 auto;
+    border: 0.2vh solid var(--cor-cinza);
+}
+
+#hobbies, #ja-fui, #vou-ir{
+    height: 20vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 5vw;
+
+    transition: height 0.5s ease-in-out;
+}
+
+#hobbies.active, #ja-fui.active, #vou-ir.active{
+    height: 40vh;
+}
+
+#hobbies h2, #ja-fui h2, #vou-ir h2{
+    font-family: var(--fonte-circular-std);
+    font-weight: 400;
+    font-size: calc(1.5vw + 1.5vh);
+    color: var(--cor-cinza-escuro);
+
+    transition: all 0.3s;
+}
+
+footer{
+    height: 60vh;
+    background-color: var(--cor-cinza-escuro);
+}
+
+footer h1{
+    font-family: var(--fonte-circular-std);
+    font-weight: 400;
+    font-size: calc(2.5vw + 2.5vh);
+    color: var(--cor-cinza);
+
+    padding-top: 10vh;
+    padding-left: 5%
+}
+
+footer hr{
+    width: 90%;
+    margin: 0 auto;
+    border: 0.2vh solid var(--cor-cinza);
+}
+
+#contatos{
+    margin-top: 2%;
+    margin-left: 5%;
+    display: flex;   
+    gap: 2%;
+}
+
+#contatos button{
+    background-color: transparent;
+    color: var(--cor-cinza);
+    padding: calc(1vh + 1vw);
+    border-radius: 100px;
+    border: 2px solid var(--cor-cinza);
+    font-family: var(--fonte-circular-std);
+    font-size: calc(0.7vw + 0.7vh);
+    transition: all 0.3s;
+}
+
+#contatos button:hover{
+    background-color: transparent;
+    color: var(--cor--branco);
+    padding: calc(1vh + 1vw);
+    border-radius: 100px;
+    border: 2px solid var(--cor--branco);
+    font-family: var(--fonte-circular-std);
+    font-size: calc(0.7vw + 0.7vh);
+}
+
+#rodape{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    margin-top: 12%;
+}
+#rodape p{
+    font-family: var(--fonte-circular-std);
+    font-size: calc(0.7vw + 0.7vh);
+}
+
+#hobbies-conteudo{
+    position: absolute;
+    display: flex;
+    top: 185%;
+    gap: 7vw;
+    left: 20%;
+    transition: opacity 0.5s;
+    opacity: 0;
+    display: none;
+}
+
+#ja-fui-conteudo{
+    position: absolute;
+    display: flex;
+    top: 205%;
+    gap: 7vw;
+    left: 20%;
+    transition: opacity 0.5s;
+    opacity: 0;
+    display: none;
+}
+
+#vou-ir-conteudo{
+    position: absolute;
+    display: flex;
+    top: 225%;
+    gap: 7vw;
+    left: 20%;
+    transition: opacity 0.5s;
+    opacity: 0;
+    display: none;
+}
+
+#hobbies-conteudo div, #ja-fui-conteudo div, #vou-ir-conteudo div{
+    background-color: var(--cor-vinho);
+    height: 25vh;
+    width: 20vw;
+}
+
+#hobbies-conteudo div h2, #ja-fui-conteudo div h2, #vou-ir-conteudo div h2{
+    font-size: calc(1vw + 1vh);
+    padding: calc(0.3vw + 0.3vh);
+}
+
+#kendo{
+    background-image: url(/assets/img/kendo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#video-game{
+    background-image: url(/assets/img/video-game.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#violino{
+    background-image: url(/assets/img/violino.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#piaui{
+    background-image: url(/assets/img/paui.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#santos{
+    background-image: url(/assets/img/santos.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#hopi-hari{
+    background-image: url(/assets/img/hopi-hari.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#china{
+    background-image: url(/assets/img/china.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#grecia{
+    background-image: url(/assets/img/grecia.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#japao{
+    background-image: url(/assets/img/japao.jpg);
+    background-size: cover;
+    background-position: center;
 }
